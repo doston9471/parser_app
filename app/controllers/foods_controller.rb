@@ -8,6 +8,7 @@ class FoodsController < ApplicationController
     page = open("http://ihale.manas.edu.kg/kki.php/")
     doc = Nokogiri::HTML(page)
     myArr = Array.new
+    newarr = Array.new
     trs= doc.css('tr')
     trs.each do |f|
       tdata = f.css('td')
@@ -66,8 +67,9 @@ class FoodsController < ApplicationController
         end
       end
       myArr.push(arr)
+      newarr = myArr.reject(&:empty?)
     end
-    render json: JSON.pretty_generate(myArr)
+    render json: JSON.pretty_generate(newarr)
   end
 end
 
