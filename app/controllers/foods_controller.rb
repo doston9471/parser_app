@@ -67,7 +67,7 @@ class FoodsController < ApplicationController
       end
       myArr.push(arr)
     end
-    render json: JSON.pretty_generate(myArr).to_json
+    render json: JSON.pretty_generate(myArr)
   end
 end
 
