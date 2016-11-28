@@ -15,7 +15,7 @@ class FoodsController < ApplicationController
       arr = Array.new
       counter=0
       x = Time.now.strftime("%m/%d/%Y")
-      myArr.push(
+      newarr.push(
       month: x
       )
       tdata.each do |td|
