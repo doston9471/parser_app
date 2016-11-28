@@ -14,10 +14,10 @@ class FoodsController < ApplicationController
       tdata = f.css('td')
       arr = Array.new
       counter=0
-      # x = Time.now.strftime("%m/%d/%Y")
-      # arr.push(
-      # month: x
-      # )
+      x = Time.now.strftime("%m/%d/%Y")
+      myArr.push(
+      month: x
+      )
       tdata.each do |td|
         counter=counter+1
         if counter == 1
