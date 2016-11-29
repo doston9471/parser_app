@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
     myArr = Array.new
     newarr = Array.new
     trs= doc.css('tr')
-    x = Time.now.strftime("%m/%d/%Y")
+    x = Time.now.strftime("%m/%Y")
     myArr.push(
     month: x
     )
