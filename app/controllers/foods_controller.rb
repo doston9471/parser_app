@@ -10,15 +10,10 @@ class FoodsController < ApplicationController
     myArr = Array.new
     newarr = Array.new
     trs= doc.css('tr')
-    x = Time.now.strftime("%m/%Y")
-    myArr.push(
-    month: x
-    )
     trs.each do |f|
       tdata = f.css('td')
       arr = Array.new
       counter=0
-
       tdata.each do |td|
         counter=counter+1
         if counter == 1
@@ -75,6 +70,15 @@ class FoodsController < ApplicationController
       newarr = myArr.reject(&:empty?)
     end
     render json: JSON.pretty_generate(newarr)
+  end
+
+  def month
+    x = Time.now.strftime("%m/%Y")
+    mon = Array.new
+    mon.push(
+    month: x
+    )
+    render json: mon[0]
   end
 end
 
