@@ -22,43 +22,43 @@ class FoodsController < ApplicationController
           )
         elsif counter == 2
           arr.push(
-          food1: td.text
+          firstCourse: td.text
           )
         elsif counter == 3
           arr.push(
-          calorie1: td.text
+          firstCourseCalorie: td.text
           )
         elsif counter == 4
           arr.push(
-          food2: td.text
+          secondCourse: td.text
           )
         elsif counter == 5
           arr.push(
-          calorie2: td.text
+          secondCourseCalorie: td.text
           )
         elsif counter == 6
           arr.push(
-          food3: td.text
+          sideDish: td.text
           )
         elsif counter == 7
           arr.push(
-          calorie3: td.text
+          sideDishCalorie: td.text
           )
         elsif counter == 8
           arr.push(
-          food4: td.text
+          dessert: td.text
           )
         elsif counter == 9
           arr.push(
-          calorie4: td.text
+          dessertCalorie: td.text
           )
         elsif counter == 10
           arr.push(
-          ekmek: td.text
+          bread: td.text
           )
         elsif counter == 11
           arr.push(
-          calorieE: td.text
+          breadCalorie: td.text
           )
         elsif counter == 12
           arr.push(
