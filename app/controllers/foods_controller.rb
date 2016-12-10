@@ -55,7 +55,6 @@ class FoodsController < ApplicationController
     end
 
     render json: @foods
-    puts Time.now
   end
 
   def month
