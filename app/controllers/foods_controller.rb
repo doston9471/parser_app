@@ -53,8 +53,11 @@ class FoodsController < ApplicationController
         Food.create(:date => f[0], :firstCourse => f[1], :firstCourseCalorie => f[2], :secondCourse => f[3], :secondCourseCalorie => f[4], :sideDish => f[5], :sideDishCalorie => f[6], :dessert => f[7], :dessertCalorie => f[8], :bread => f[9], :breadCalorie => f[10], :total => f[11])
       end
     end
-
-    render json: @foods
+    respond_to do |format|
+      format.html
+      format.json { render json: @foods }
+    end
+    # render json: @foods
   end
 
   def month
